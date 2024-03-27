@@ -1,18 +1,28 @@
 import "../styles/App.scss";
 import getItemsAPI from "../services/getItemsAPI";
 import { useState, useEffect } from "react";
+import List from "./CharactersList";
 
 function App() {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    getItemsAPI().then((itemsData) => {
-      setCharacters(itemsData);
-      console.log(itemsData);
+    getItemsAPI().then((charactersData) => {
+      setCharacters(charactersData);
+      console.log(charactersData);
     });
   }, []);
 
-  return <h1>hola</h1>;
+  return (
+    <>
+      <header>
+        <h1>Titulo</h1>
+      </header>
+      <main>
+        <List characters={characters} />
+      </main>
+    </>
+  );
 }
 
 export default App;
