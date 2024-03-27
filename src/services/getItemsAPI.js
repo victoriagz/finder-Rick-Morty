@@ -8,6 +8,9 @@ const getItemsAPI = () => {
           name: user.name,
           picture: user.image,
           specie: user.species,
+          status: user.status,
+          origin: user.origin.name,
+          episodes: user.episode.length,
         };
       });
       return parsedUsers;

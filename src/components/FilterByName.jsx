@@ -1,12 +1,18 @@
+import "../styles/Filter.scss";
+
 function FilterByName({ onChangeName, value }) {
   const handleChange = (event) => {
     onChangeName(event.target.value);
     console.log(value);
   };
   return (
-    <div>
-      <label htmlFor="">Filtro por nombre</label>
-      <input type="text" onChange={handleChange} value={value} />
+    <div className="filter-container">
+      <input
+        className="input-large"
+        type="text"
+        onChange={handleChange}
+        value={value}
+      />
     </div>
   );
 }
