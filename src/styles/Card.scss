@@ -1,0 +1,23 @@
+.character-card {
+    text-align: center; 
+    justify-content: center;
+    align-items: center;
+    background-color: #00bbf9
+  }
+  
+  .character-card img {
+    width: 100%;
+    display: block; 
+  }
+  
+  .character-card h1,
+  .character-card p {
+    margin: 10px ;
+    color: white;
+  }
+  
+  .link-style {
+    color: inherit; /* Heredar el color del texto del elemento padre */
+    text-decoration: none; /* Eliminar la subrayado por defecto */
+  }
+  

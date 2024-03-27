@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import "../styles/Card.scss";
 
 function CharacterCard({ characterData }) {
   return (
-    <li>
-      <Link to={`/character/${characterData.id}`}>
+    <li className="character-card">
+      <Link className="link-style" to={`/character/${characterData.id}`}>
         <img src={characterData.picture} alt={characterData.name} />
-        <h2>{characterData.name}</h2>
+        <h1>{characterData.name}</h1>
         <p>{characterData.specie}</p>
       </Link>
     </li>

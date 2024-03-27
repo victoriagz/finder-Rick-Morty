@@ -1,15 +1,20 @@
 import { Link } from "react-router-dom";
+import "../styles/Detail.scss";
 
 function CharacterDetail({ characterDetail }) {
   return (
-    <div>
-      <img src={characterDetail.picture} alt={characterDetail.name} />
-      <h2>{characterDetail.name}</h2>
-      <p>{characterDetail.specie}</p>
-      <p>{characterDetail.status}</p>
-      <p>{characterDetail.origin}</p>
-      <p>{characterDetail.episodes}</p>
-      <Link to="/">Volver al Inicio</Link>
+    <div className="character-detail-container">
+      <div className="character-detail">
+        <img src={characterDetail.picture} alt={characterDetail.name} />
+        <h1>{characterDetail.name}</h1>
+        <p>Specie: {characterDetail.specie}</p>
+        <p>Status: {characterDetail.status}</p>
+        <p>Origin: {characterDetail.origin}</p>
+        <p>Episodes: {characterDetail.episodes}</p>
+        <Link className="btn-link" to="/">
+          Volver al Inicio
+        </Link>
+      </div>
     </div>
   );
 }
