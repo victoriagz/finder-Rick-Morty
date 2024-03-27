@@ -1,10 +1,14 @@
+import "../styles/List.scss";
+
 import Card from "./CharacterCard";
 function CharactersList({ characters }) {
   return (
-    <section>
-      <ul>
+    <section className="container-list">
+      <ul className="characters-list">
         {characters.map((character) => {
-          return <Card characterData={character} />;
+          return (
+            <Card className="characters-list-item" characterData={character} />
+          );
         })}
       </ul>
     </section>
