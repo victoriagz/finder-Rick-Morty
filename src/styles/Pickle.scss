@@ -9,14 +9,35 @@
             transform: scale(1.1);
         }
     }
+
+    @media screen and (min-width: 768px) {
+        position: absolute;
+        top: 36px;
+        left: 80px;
+      }
+      
 }
 
  .pickle {
     width: 100px;
+
+    @media screen and (min-width: 768px){ 
+        width: 65px;
+    }
+
  }
 
  .chat {
     width: 100px;
     padding-bottom: 31px;
     margin-right: -22px;
+
+    @media screen and (min-width: 768px){
+        width: 82px;
+        padding-bottom: 44px;
+        margin-right: -37px;
+
+    }
+
  }
+
