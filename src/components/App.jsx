@@ -1,5 +1,5 @@
 import "../styles/App.scss";
-import FilterByName from "./FilterByName";
+import Filters from "./Filters";
 import { Route, Routes, useLocation, matchPath } from "react-router-dom";
 import { useState, useEffect } from "react";
 import getItemsAPI from "../services/getItemsAPI";
@@ -10,6 +10,7 @@ import Header from "./Header";
 function App() {
   const [characters, setCharacters] = useState([]);
   const [filterName, setFilterName] = useState("");
+  const [filterSpecie, setFilterSpecie] = useState("All");
 
   useEffect(() => {
     getItemsAPI().then((charactersData) => {
@@ -22,8 +23,14 @@ function App() {
     setFilterName(value);
   };
 
-  const filteredCharacters = characters.filter((character) =>
-    character.name.toLowerCase().includes(filterName.toLowerCase())
+  const handleChangeSpecie = (value) => {
+    setFilterSpecie(value);
+  };
+
+  const filteredCharacters = characters.filter(
+    (character) =>
+      character.name.toLowerCase().includes(filterName.toLowerCase()) &&
+      (filterSpecie === "All" || character.specie === filterSpecie)
   );
 
   const { pathname } = useLocation();
@@ -43,7 +50,11 @@ function App() {
         <Header />
         <main>
           {!isCharacterDetailPage && (
-            <FilterByName onChangeName={handleChangeName} value={filterName} />
+            <Filters
+              onChangeName={handleChangeName}
+              value={filterName}
+              onChangeSpecie={handleChangeSpecie}
+            />
           )}
           <Routes>
             <Route
