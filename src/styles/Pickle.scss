@@ -1,0 +1,23 @@
+.themeContainer{ 
+    cursor: pointer;
+    position: absolute;
+    top: 106px;
+    left: 80px;
+    animation: beat .40s infinite alternate;
+
+    @keyframes beat {
+        to {
+            transform: scale(1.1);
+        }
+    }
+}
+
+ .pickle {
+    width: 100px;
+ }
+
+ .chat {
+    width: 100px;
+    padding-bottom: 31px;
+    margin-right: -22px;
+ }

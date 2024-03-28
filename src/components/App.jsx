@@ -35,12 +35,16 @@ function App() {
     return character.id === idCharacter;
   });
 
+  const isCharacterDetailPage = characterDetailRoute !== null;
+
   return (
     <>
       <div className="body">
         <Header />
         <main>
-          <FilterByName onChangeName={handleChangeName} value={filterName} />
+          {!isCharacterDetailPage && (
+            <FilterByName onChangeName={handleChangeName} value={filterName} />
+          )}
           <Routes>
             <Route
               path="/"

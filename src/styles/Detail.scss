@@ -1,22 +1,25 @@
 .character-detail-container {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    height: 100vh; 
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  height: 100vh;
+  box-sizing: border-box; 
+}
   
   .character-detail {
+    width: 70%;
     text-align: center; 
+    background-color: #00bbf9;
+    border: 5px solid #eeef20;
   }
   
   .character-detail img {
-    display: block;
-    margin: 0 auto 20px; 
+    border-radius: 5px;
   }
   
   .character-detail h1,
   .character-detail p {
-    margin: 10px 0; 
     color: white;
   }
   

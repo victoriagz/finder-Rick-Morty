@@ -1,13 +1,15 @@
 .filter-container {
     display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
+    justify-content: center; 
+    align-items: center; 
   }
   
   .input-large {
-    width: 400px; /* Tamaño grande del input */
-    height: 50px; /* Altura del input */
-    font-size: 20px; /* Tamaño de fuente */
-    text-align: center; /* Texto centrado */
+    border: 2px solid green;
+    background-color: black;
+    width: 300px; 
+    height: 50px; 
+    font-size: 15px; 
+    text-align: center; 
   }
   

@@ -1,12 +1,13 @@
 .container-list{
     margin-top: 60px;
+    padding: auto;
 }
 
 
 .characters-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 50px; 
+    gap: 10px; 
 
   }
   

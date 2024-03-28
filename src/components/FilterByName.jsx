@@ -12,6 +12,7 @@ function FilterByName({ onChangeName, value }) {
         type="text"
         onChange={handleChange}
         value={value}
+        placeholder="Escribe aquí tu personaje favorito..."
       />
     </div>
   );

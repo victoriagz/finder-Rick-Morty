@@ -11,10 +11,10 @@ function CharacterDetail({ characterDetail }) {
         <p>Status: {characterDetail.status}</p>
         <p>Origin: {characterDetail.origin}</p>
         <p>Episodes: {characterDetail.episodes}</p>
-        <Link className="btn-link" to="/">
-          Volver al Inicio
-        </Link>
       </div>
+      <Link className="btn-link" to="/">
+        Back to home
+      </Link>
     </div>
   );
 }
