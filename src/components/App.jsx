@@ -10,7 +10,6 @@ import Header from "./Header";
 function App() {
   const [characters, setCharacters] = useState([]);
   const [filterName, setFilterName] = useState("");
-  const [filterSpecie, setFilterSpecie] = useState("All");
 
   useEffect(() => {
     getItemsAPI().then((charactersData) => {
@@ -23,14 +22,8 @@ function App() {
     setFilterName(value);
   };
 
-  const handleChangeSpecie = (value) => {
-    setFilterSpecie(value);
-  };
-
-  const filteredCharacters = characters.filter(
-    (character) =>
-      character.name.toLowerCase().includes(filterName.toLowerCase()) &&
-      (filterSpecie === "All" || character.specie === filterSpecie)
+  const filteredCharacters = characters.filter((character) =>
+    character.name.toLowerCase().includes(filterName.toLowerCase())
   );
 
   const { pathname } = useLocation();
@@ -50,11 +43,7 @@ function App() {
         <Header />
         <main>
           {!isCharacterDetailPage && (
-            <Filters
-              onChangeName={handleChangeName}
-              value={filterName}
-              onChangeSpecie={handleChangeSpecie}
-            />
+            <Filters onChangeName={handleChangeName} value={filterName} />
           )}
           <Routes>
             <Route
