@@ -29,6 +29,6 @@ Instala las dependencias locales
 
 $ npm install
 Arranca el proyecto:
-$ npm start
+$ npm run dev
 ## Autora
 Proyecto realizado por Victoria González Zangarini😊
